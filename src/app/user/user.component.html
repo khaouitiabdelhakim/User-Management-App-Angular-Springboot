@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <h3>User Management Spring Boot & Angular</h3>
+    <div class="mb-3">
+      <input [(ngModel)]="newUser.firstName" class="form-control" placeholder="First Name">
+      <br>
+      <input [(ngModel)]="newUser.lastName" class="form-control" placeholder="Last Name">
+      <button (click)="addUser()" class="btn btn-primary mt-2">Add User</button>
+    </div>
+    <br>
+    <h3>The Saved Users</h3>
+    <ul class="list-group">
+      <li *ngFor="let user of users" class="list-group-item">
+        {{ user.firstName }} {{ user.lastName }}
+      </li>
+    </ul>
+  </div>
+  
